@@ -4,7 +4,7 @@
     <ul class="navbar-nav justify-content-end">
       @if(Auth::check())
         <li class="nav-item">
-          <a href="#" class="nav-link">用户列表</a>
+          <a href="{{route('users.index')}}" class="nav-link">用户列表</a>
         </li>
         <li class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Auth::user()->name}}</a>
@@ -23,7 +23,10 @@
         </li>
       @endif
       <li class="nav-item"><a class="nav-link" href="{{route('help')}}">帮助</a></li>
+      @if(Auth::check())
+      @else
       <li class="nav-item"><a class="nav-link" href="{{route('login')}}">登录</a></li>
+      @endif
     </ul>
   </div>
 </nav>
