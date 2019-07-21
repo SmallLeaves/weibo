@@ -6,12 +6,6 @@ body{
   font-weight: normal;
 }
 
-nav.navbar.navbar-expand-lg{
-  margin-bottom: 20px;
-  a{
-    color: #fff;
-  }
-}
 footer{
   margin-top: 45px;
   padding-top: 5px;
@@ -33,7 +27,8 @@ img.brand-icon{
   width: 17px;
   height: 17px;
 }
-
+.navbar .container .navbar-brand,
+.navbar .container .navbar-nav li.nav-item > a{color: #fff;}
 /*User gravatar*/
 section.user_info{
   padding-bottom: 10px;

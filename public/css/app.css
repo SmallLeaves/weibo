@@ -10649,14 +10649,6 @@ body {
   font-weight: normal;
 }
 
-nav.navbar.navbar-expand-lg {
-  margin-bottom: 20px;
-}
-
-nav.navbar.navbar-expand-lg a {
-  color: #fff;
-}
-
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -10681,6 +10673,11 @@ small {
 img.brand-icon {
   width: 17px;
   height: 17px;
+}
+
+.navbar .container .navbar-brand,
+.navbar .container .navbar-nav li.nav-item > a {
+  color: #fff;
 }
 
 /*User gravatar*/
