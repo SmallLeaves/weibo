@@ -10680,6 +10680,10 @@ img.brand-icon {
   color: #fff;
 }
 
+nav.navbar.navbar-expand-lg {
+  margin-bottom: 20px;
+}
+
 /*User gravatar*/
 
 section.user_info {
