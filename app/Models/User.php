@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Str;
+use Auth;
 class User extends Authenticatable
 {
     use Notifiable;
@@ -52,8 +53,11 @@ class User extends Authenticatable
     }
     /*该方法将当前用户发布过的所有微博从数据库中取出，并根据创建时间来倒序排序*/
     public function feed(){
-        return $this->statuses()
-                    ->orderBy('created_at','desc');
+        $user_ids = $this->followings->pluck('id')->toArray();
+        array_push($user_ids, $this->id);
+        return Status::whereIn('user_id',$user_ids)
+                            ->with('user')
+                            ->orderBy('created_at','desc');
     }
     /*粉丝表*/
     public function followers(){
