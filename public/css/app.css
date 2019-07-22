@@ -10722,3 +10722,10 @@ section.user_info h1 {
   max-width: 100px;
 }
 
+/* statuses list */
+
+.media-body h5 > span {
+  float: left;
+  font-size: 80%;
+}
+

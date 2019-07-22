@@ -60,3 +60,8 @@ section.user_info{
     max-width: 100px;
   }
 }
+/* statuses list */
+.media-body h5 > span {
+    float: left;
+    font-size: 80%;
+}
